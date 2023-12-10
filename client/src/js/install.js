@@ -21,5 +21,7 @@ butInstall.addEventListener("click", async () => {
 	installButton.setAttribute("hidden", "");
 });
 
-// TODO: Add an handler for the `appinstalled` event
-window.addEventListener("appinstalled", (event) => {});
+// Handler for the `appinstalled` event
+window.addEventListener("appinstalled", (event) => {
+	console.log("Thank you for installing my Text Editor app!");
+});
