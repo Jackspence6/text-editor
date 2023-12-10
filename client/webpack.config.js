@@ -21,15 +21,15 @@ module.exports = () => {
 			}),
 
 			new InjectManifest({
-				swSrc: "./src/sw.js",
+				swSrc: "./src-sw.js",
 				swDest: "service-worker.js",
 			}),
 			new WebpackPwaManifest({
 				name: "Text Editor",
 				short_name: "JATE",
 				description: "Edit you text like never before!",
-				background_color: "#7eb4e2",
-				theme_color: "#7eb4e2",
+				background_color: "#28282B",
+				theme_color: "#b58282",
 				start_url: "/",
 				publicPath: "/",
 				icons: [
