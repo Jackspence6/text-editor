@@ -28,7 +28,13 @@ export default class {
 			console.info("Loaded data from IndexedDB, injecting into editor");
 			console.log("Data retrieved:", data);
 
-			const contentToSet = data.length > 0 ? data[0].jate : localData || header;
+			let contentToSet = "";
+			if (data.length > 0 && typeof data[0].jate === "string") {
+				contentToSet = data[0].jate;
+			} else {
+				contentToSet = localData || header;
+			}
+
 			this.editor.setValue(contentToSet);
 		});
 
