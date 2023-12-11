@@ -22,9 +22,11 @@ module.exports = () => {
 
 			new InjectManifest({
 				swSrc: "./src-sw.js",
-				swDest: "service-worker.js",
+				swDest: "src-sw.js",
 			}),
 			new WebpackPwaManifest({
+				fingerprints: false,
+				inject: true,
 				name: "Text Editor",
 				short_name: "JATE",
 				description: "Edit you text like never before!",
@@ -47,6 +49,10 @@ module.exports = () => {
 				{
 					test: /\.css$/i,
 					use: ["style-loader", "css-loader"],
+				},
+				{
+					test: /\.(png|svg|jpg|jpeg|gif)$/i,
+					type: "asset/resource",
 				},
 				{
 					test: /\.m?js$/,

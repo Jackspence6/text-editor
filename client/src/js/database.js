@@ -31,7 +31,6 @@ export const putDb = async (content) => {
 	const result = await request;
 
 	console.log("🚀 - Code saved to the database!", result);
-	console.error("putDb not implemented!");
 };
 
 // Method that gets all the content from the database
@@ -54,7 +53,6 @@ export const getDb = async () => {
 	const result = await request;
 
 	console.log("result.value", result);
-	console.error("getDb not implemented!");
 	return result;
 };
 
