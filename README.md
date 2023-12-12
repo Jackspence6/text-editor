@@ -4,10 +4,6 @@
 
 A browser-based text editor PWA with offline capabilities. Utilizes idb for data persistence and service workers for caching. Deployed on Heroku, offering a seamless note-taking and code snippet experience.
 
-## Live Heroku Link
-
-You can explore the live application of the Text Editor on Heroku: TBA
-
 ## Table of Contents
 
 - [Installation](#installation)
